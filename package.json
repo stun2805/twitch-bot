@@ -1,0 +1,23 @@
+{
+  "name": "twitch-bot",
+  "version": "1.0.0",
+  "description": "Bot de recompensas para Twitch",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+```
+
+**Archivo 2: Crea `.gitignore`** (nuevo archivo)
+
+Crea un archivo llamado `.gitignore` (con el punto al inicio) y escribe:
+```
+node_modules/
+.env
