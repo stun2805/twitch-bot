@@ -13,11 +13,3 @@
     "node": ">=18.0.0"
   }
 }
-```
-
-**Archivo 2: Crea `.gitignore`** (nuevo archivo)
-
-Crea un archivo llamado `.gitignore` (con el punto al inicio) y escribe:
-```
-node_modules/
-.env
