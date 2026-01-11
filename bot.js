@@ -1,17 +1,20 @@
 // ===================================
 // BOT DE RECOMPENSAS PARA TWITCH
+// Versión optimizada para Render.com
 // ===================================
 
 const tmi = require('tmi.js');
+const http = require('http');
 
-// ⚙️ CONFIGURACIÓN - CAMBIA ESTOS DATOS
+// ⚙️ CONFIGURACIÓN desde variables de entorno
+// Render leerá estas variables automáticamente
 const config = {
-  channels: ['rhaidenshadow'],        // ← Tu nombre de usuario de Twitch (en minúsculas)
-  botUsername: 'zeroraid0205', // ← Nombre del bot (puede ser el mismo que tu canal)
-  oauth: 'oauth:np2cum4l01zmhfaoum65tsp712fwyd'   // ← Pega aquí el token OAuth completo
+  channels: [process.env.TWITCH_CHANNEL || 'tu_canal'],
+  botUsername: process.env.TWITCH_BOT_USERNAME || 'nombre_del_bot',
+  oauth: process.env.TWITCH_OAUTH || 'oauth:tu_token_aqui'
 };
 
-// 🎁 LISTA DE RECOMPENSAS (puedes agregar más)
+// 🎁 LISTA DE RECOMPENSAS (puedes modificarlas como quieras)
 const rewards = [
   '1 pase',
   '1 anime',
@@ -22,6 +25,17 @@ const rewards = [
   '1 emote personalizado',
   '1 shoutout en stream'
 ];
+
+// Crear servidor HTTP simple para que Render sepa que el servicio está activo
+const PORT = process.env.PORT || 3000;
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot de Twitch funcionando correctamente! ✅\n');
+});
+
+server.listen(PORT, () => {
+  console.log(`🌐 Servidor HTTP escuchando en puerto ${PORT}`);
+});
 
 // Crear cliente de Twitch
 const client = new tmi.Client({
@@ -85,7 +99,7 @@ client.on('message', async (channel, tags, message, self) => {
     for (let i = 5; i >= 1; i--) {
       client.say(channel, `${i}...`);
       console.log(`   ${i}...`);
-      await sleep(1000); // 1 segundo entre cada número
+      await sleep(1000);
     }
 
     // Seleccionar una recompensa al azar
@@ -103,7 +117,7 @@ client.on('message', async (channel, tags, message, self) => {
   }
 });
 
-// Función para hacer pausas (NO MODIFICAR)
+// Función para hacer pausas
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -118,4 +132,9 @@ client.on('disconnected', (reason) => {
   console.log(`⚠️  Bot desconectado: ${reason}`);
 });
 
-console.log('🚀 Iniciando bot de Twitch...');
+// Keepalive para evitar que Render duerma el servicio
+setInterval(() => {
+  console.log(`💓 Keepalive - ${new Date().toISOString()}`);
+}, 5 * 60 * 1000); // Cada 5 minutos
+
+console.log('🚀 Iniciando bot de Twitch...');Actualizar para render
