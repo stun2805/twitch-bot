@@ -137,4 +137,4 @@ setInterval(() => {
   console.log(`💓 Keepalive - ${new Date().toISOString()}`);
 }, 5 * 60 * 1000); // Cada 5 minutos
 
-console.log('🚀 Iniciando bot de Twitch...');Actualizar para render
+console.log('🚀 Iniciando bot de Twitch...');
