@@ -16,14 +16,14 @@ const config = {
 
 // 🎁 LISTA DE RECOMPENSAS (puedes modificarlas como quieras)
 const rewards = [
-  '1 pase',
-  '1 anime',
-  '1 perro',
-  '1 gato',
-  '1 suscripción',
-  '100 puntos de canal',
-  '1 emote personalizado',
-  '1 shoutout en stream'
+  'nada por rhaideNgais ',
+  'nada por rhaideNgais',
+  'nada por rhaideNgais',
+  'nada por rhaideNgais',
+  'nada por rhaideNgais',
+  'nada por rhaideNgais',
+  'nada por pendejo',
+  'nada por rhaideNgais'
 ];
 
 // Crear servidor HTTP simple para que Render sepa que el servicio está activo
@@ -138,3 +138,4 @@ setInterval(() => {
 }, 5 * 60 * 1000); // Cada 5 minutos
 
 console.log('🚀 Iniciando bot de Twitch...');
+
