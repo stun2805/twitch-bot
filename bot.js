@@ -22,12 +22,10 @@ const rewards = [
   'Nada Por rhaideNgais ',
   'Timeout 2m',
   'Canje Basico',
-  'Nada Por rhaideNgais ',
   '2 Cofres',
   'Nada Por rhaideNgais ',
   'Ni la misericordia por rhaideNgais'
   'Eliges Un Ban de 1m '
-  'Nada Por rhaideNgais ',
   'Intentalo Otra vez',
   'Tu siguiente Recompensa se la dara a alguien Mas',
 ];
@@ -144,6 +142,7 @@ setInterval(() => {
 }, 5 * 60 * 1000); // Cada 5 minutos
 
 console.log('🚀 Iniciando bot de Twitch...');
+
 
 
 
