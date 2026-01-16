@@ -16,14 +16,21 @@ const config = {
 
 // 🎁 LISTA DE RECOMPENSAS (puedes modificarlas como quieras)
 const rewards = [
-  'nada por rhaideNgais ',
-  'nada por rhaideNgais',
-  'nada por rhaideNgais',
-  'nada por rhaideNgais',
-  'nada por rhaideNgais',
-  'nada por rhaideNgais',
-  'nada por pendejo',
-  'nada por rhaideNgais'
+  'Nada Por rhaideNgais ',
+  'Musica Final de Stream',
+  '1 Cofre',
+  'Timeout 1m ',
+  'Nada Por rhaideNgais ',
+  'Timeout 2m',
+  'Canje Basico',
+  'Nada Por rhaideNgais ',
+  '2 Cofres',
+  'Nada Por rhaideNgais ',
+  'Ni la misericordia por rhaideNgais'
+  'Eliges Un Ban de 1m '
+  'Nada Por rhaideNgais ',
+  'Intentalo Otra vez',
+  'Tu siguiente Recompensa se la dara a alguien Mas',
 ];
 
 // Crear servidor HTTP simple para que Render sepa que el servicio está activo
@@ -138,4 +145,5 @@ setInterval(() => {
 }, 5 * 60 * 1000); // Cada 5 minutos
 
 console.log('🚀 Iniciando bot de Twitch...');
+
 
