@@ -16,7 +16,6 @@ const config = {
 
 // 🎁 LISTA DE RECOMPENSAS (puedes modificarlas como quieras)
 const rewards = [
-  'Nada Por rhaideNgais ',
   'Musica Final de Stream',
   '1 Cofre',
   'Timeout 1m ',
@@ -145,5 +144,6 @@ setInterval(() => {
 }, 5 * 60 * 1000); // Cada 5 minutos
 
 console.log('🚀 Iniciando bot de Twitch...');
+
 
 
